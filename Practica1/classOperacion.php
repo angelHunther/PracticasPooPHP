@@ -15,13 +15,11 @@
     public function getSuma(){
         $this->resultado = $this->cantidad1 + $this->cantidad2;
         return $this->resultado; 
-
     }
 
     public function getResta(){
         $this->resultado = $this->cantidad1 - $this->cantidad2;
         return $this->resultado; 
-
     }
 
     public function getMultiplicacion(){
