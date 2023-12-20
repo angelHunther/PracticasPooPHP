@@ -1,10 +1,11 @@
 <?php 
 
 //clase Padre
-class Persona{
+abstract class Persona{
     public $intDpi;
     public $strNombre;
     public $intEdad;
+    public $mensaje;
     
     function __construct(int $Dpi, string $nombre, int $edad)
     {
@@ -12,16 +13,11 @@ class Persona{
         $this->strNombre = $nombre;
         $this->intEdad = $edad;
     }
-    public function getDatosPesonales()
-    {
-        $datos ="
-        <h2>Datos Pesonales</h2>
-        DPI: {$this->intDpi}</br>
-        Nombre: {$this->strNombre}</br>
-        Edad: {$this->intEdad}</br>
-        ";
-        return $datos;
-    }
+    abstract public function getDatosPesonales();
+    abstract public function setMensaje(string $mensaje);
+    abstract public function getMensaje():string;
+
+
 
 }
 
