@@ -1,21 +1,23 @@
-<?php 
-// require_once 'classPersona.php';
-require_once 'autoload.php';
-class Empleado extends Persona{
-    protected $strPuesto;
+<?php
+namespace Controller;
+
+// require_once '../Model/Persona.php';
+use Model\Persona;
+// require_once 'autoload.php';
+class Cliente extends Persona{
+    protected $fltCredito;
     function __construct(int $Dpi, string $nombre, int $edad)
     {
         parent::__construct($Dpi, $nombre, $edad);
     }
-    public function setPuesto(string $Puesto){
+    public function setCredito(string $credito){
 
-        $this->strPuesto = $Puesto;
+        $this->fltCredito = $credito;
     }
-    public function getPuesto():string
+    public function getCredito():string
     {
-       return $this->strPuesto;
+       return $this->fltCredito;
     }
-
     public function getDatosPesonales()
     {
         $datos ="
@@ -35,7 +37,4 @@ class Empleado extends Persona{
         return $this->mensaje.''. $this->strNombre;
     }
 
-
-
 }
-?>

@@ -1,5 +1,5 @@
 <?php 
-
+namespace Model;
 //clase Padre
 abstract class Persona{
     public $intDpi;
