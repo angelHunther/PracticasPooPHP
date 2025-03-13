@@ -23,7 +23,7 @@ class Usuario extends Conexion{
         $arrData = array($this->strNombre,$this->intTel,$this->strEmail);
         $restInsert = $insert->execute($arrData);
         $idInsert = $this->conexion->lastInsertId();
-        return $idInsert;
+        return true;
 
     }
     public function getUsuarios()
